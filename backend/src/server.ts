@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 const app = express();
 const PORT = 4000;
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 app.get("/api/check", async (req, res) => {
   const targetUrl = req.query.url as string;
